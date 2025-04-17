@@ -17,7 +17,7 @@ where:
 - $N = \sum b_i C_i$ is an **effective** divisor with support on a negative definite intersection matrix,
 - $P \cdot N = 0$.
 
-## Mathematical Reference
+## Reference
 
 This algorithm is based on **Theorem 7.7** of the following paper:
 
