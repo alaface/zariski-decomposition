@@ -41,15 +41,15 @@ The algorithm computes the Zariski decomposition of a pseudo-effective divisor $
 2. **Construct the negative part**: Let $C_1, \dots, C_r$ be the curves found in step 1.  
    Look for a divisor of the form $N = \sum_{j=1}^r b_j C_j$ such that:
 
-   $$
+   $
    N \cdot C_i = D \cdot C_i \quad \text{for all } i = 1, \dots, r
-   $$
+   $
 
    This yields the linear system:
 
-   $$
+   $
    \sum_{j=1}^r (C_i \cdot C_j) \, b_j = D \cdot C_i
-   $$
+   $
 
    The matrix $(C_i \cdot C_j)$ is negative definite, so the system has a unique solution in $\mathbb{Q}^r$.
 
