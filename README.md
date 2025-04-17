@@ -36,7 +36,7 @@ The algorithm computes the Zariski decomposition of a pseudo-effective divisor $
 
    $$N \cdot C_i = D \cdot C_i \quad \text{for all } i = 1, \dots, r$$
 
-   The matrix $(C_i \cdot C_j)$ is negative definite, so the system has a unique solution in $\mathbb{Q}^r$.
+   The matrix $(C_i \cdot C_j)$ is negative definite, so the system has a unique solution in $\mathbb{Q}^r_{\geq 0}$.
 
 3. **Update**: Set $D := D - N$. The new divisor satisfies $(D \cdot C_i = 0)$ for all curves in the support of $N$.
 
