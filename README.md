@@ -48,3 +48,39 @@ The algorithm iteratively removes the negative part of \(D\) as follows:
 
 ```magma
 load "library.m";
+
+## Example: Dimension 3
+
+You can run the following example after loading the library:
+
+```magma
+load "library.m";
+
+R := Rationals();
+V := VectorSpace(R, 3);
+
+// Negative definite intersection matrix
+M := Matrix(R, 3, 3, [ -2, 1, 0,
+                    1,-2, 1,
+                    0, 1,-2 ]);
+
+// Curve basis
+C1 := V![1,0,0];
+C2 := V![0,1,0];
+C3 := V![0,0,1];
+Curves := [C1, C2, C3];
+
+// Divisor with non-negative coefficients
+D := V![2,1,0];
+
+// Compute Zariski decomposition
+P, N := ZariskiDecomposition(D, Curves, M);
+
+print "D =", D;
+print "P =", P;
+print "N =", N;
+
+// Check intersection with each curve
+for i in [1..#Curves] do
+ printf "P · C%o = %o\n", i, IntersectionNumber(P, Curves[i], M);
+end for;
