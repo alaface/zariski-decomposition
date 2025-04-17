@@ -1,6 +1,6 @@
 # Zariski Decomposition in Magma
 
-This repository provides a Magma implementation of the **Zariski decomposition** of a pseudo-effective divisor on an algebraic surface, based on its intersection matrix and a list of irreducible curve classes.
+This repository provides a Magma implementation of the **Zariski decomposition** of a pseudo-effective divisor on an algebraic surface, based on the intersection matrix of the irreducible curve in the support of $D$.
 
 ## Contents
 
