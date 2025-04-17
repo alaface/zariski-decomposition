@@ -19,12 +19,11 @@ where:
 
 ## Mathematical Reference
 
-This algorithm is based on:
+This algorithm is based on **Theorem 7.7** of the following paper:
 
 **Oscar Zariski**,  
 *The Theorem of Riemann-Roch for High Multiples of an Effective Divisor on an Algebraic Surface*,  
 Annals of Mathematics, Vol. 76, No. 3 (Nov., 1962), pp. 560–615.  
-See **Theorem 7.7** for the step-by-step construction.
 
 ## How it Works
 
