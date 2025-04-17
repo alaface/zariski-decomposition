@@ -1,6 +1,6 @@
 # Zariski Decomposition in Magma
 
-This repository provides a Magma implementation of the **Zariski decomposition** of a pseudo-effective divisor on an algebraic surface, based on the intersection matrix of the irreducible curve in the support of $D$.
+This repository provides a Magma implementation of the **Zariski decomposition** of an effective divisor on an algebraic surface, based on the intersection matrix of the irreducible curve in the support of $D$.
 
 ## Contents
 
@@ -8,7 +8,7 @@ This repository provides a Magma implementation of the **Zariski decomposition**
 
 ## Description
 
-Given a surface $X$, a pseudo-effective divisor $D$, and a finite set of irreducible curves $C_1, \dots, C_n$, the **Zariski decomposition** expresses $D$ uniquely as:
+Given a surface $X$, aneffective divisor $D$, and a finite set of irreducible curves $C_1, \dots, C_n$ which form the support of $D$, the **Zariski decomposition** expresses $D$ uniquely as:
 
 $D = P + N$
 
