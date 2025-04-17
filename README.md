@@ -47,9 +47,7 @@ The algorithm computes the Zariski decomposition of a pseudo-effective divisor $
 
 3. **Update**: Set $D := D - N$. The new divisor satisfies $(D \cdot C_i = 0)$ for all curves in the support of $N$.
 
-4. **Termination**: Repeat the process with the updated $D$.  
-   The algorithm stops when $D$ becomes nef, i.e., when $D \cdot C_i \ge 0$ for all curves.  
-   Since each step adds new linearly independent directions to the negative part and the Néron–Severi group has finite rank, the process terminates in finitely many steps.
+4. **Termination**: Repeat the process with the updated $D$. The algorithm stops when $D$ becomes nef, i.e., when $D \cdot C_i \ge 0$ for all curves.  
       
 ## How to Use
 
