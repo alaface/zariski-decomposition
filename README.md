@@ -5,7 +5,6 @@ This repository provides a Magma implementation of the **Zariski decomposition**
 ## Contents
 
 - `library.m` — Core library implementing the decomposition algorithm.
-- `example_dim3.m` — Example in dimension 3 with a tridiagonal intersection matrix.
 
 ## Description
 
@@ -35,9 +34,11 @@ The algorithm iteratively removes the negative part of $D$ as follows:
 
 1. **Negative curves**: Identify all curves $C_i$ such that $D \cdot C_i < 0$.
 2. **Linear system**: Solve the system  
+
    $$
    (C_i \cdot C_j)_{i,j} \cdot \mathbf{b} = (D \cdot C_i)_i
    $$
+
 where the $b_j$ are the coefficients of the negative part $N = \sum b_j C_j$.
 3. **Update**: Replace $D := D - N$, and repeat.
 4. **Termination**: The process stops when the updated divisor is nef. Since the Néron–Severi group has finite rank, this happens in finitely many steps.
