@@ -34,19 +34,31 @@ The algorithm iteratively removes the negative part of $D$ as follows:
 
 ## How it Works
 
-The algorithm iteratively removes the negative part of $D$ as follows:
+The algorithm computes the Zariski decomposition of a pseudo-effective divisor $D$ by iteratively extracting its negative part. It works as follows:
 
-1. **Negative curves**: Identify all curves $C_i$ such that $D \cdot C_i < 0$.
+1. **Negative curves**: Identify all irreducible curves $C_i$ in the support of $D$ such that $D \cdot C_i < 0$.
 
-2. **Linear system**: Solve the system  
-   $(C_i \cdot C_j) \cdot b_j = D \cdot C_i$  
-   where the $b_j$ are the coefficients of the negative part $N = \sum b_j C_j$.
+2. **Construct the negative part**: Let $C_1, \dots, C_r$ be the curves found in step 1.  
+   Look for a divisor of the form $N = \sum_{j=1}^r b_j C_j$ such that:
 
-3. **Update**: Replace $D := D - N$, and repeat.
+   $$
+   N \cdot C_i = D \cdot C_i \quad \text{for all } i = 1, \dots, r
+   $$
 
-4. **Termination**: The process stops when the updated divisor is nef.  
-   Since the Néron–Severi group has finite rank, this happens in finitely many steps.
-   
+   This yields the linear system:
+
+   $$
+   \sum_{j=1}^r (C_i \cdot C_j) \, b_j = D \cdot C_i
+   $$
+
+   The matrix $(C_i \cdot C_j)$ is negative definite, so the system has a unique solution in $\mathbb{Q}^r$.
+
+3. **Update**: Set $D := D - N$. The new divisor satisfies $(D \cdot C_i = 0)$ for all curves in the support of $N$.
+
+4. **Termination**: Repeat the process with the updated $D$.  
+   The algorithm stops when $D$ becomes nef, i.e., when $D \cdot C_i \ge 0$ for all curves.  
+   Since each step adds new linearly independent directions to the negative part and the Néron–Severi group has finite rank, the process terminates in finitely many steps.
+      
 ## How to Use
 
 1. Load the library:
