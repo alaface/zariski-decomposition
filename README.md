@@ -9,7 +9,7 @@ This repository provides a Magma implementation of the **Zariski decomposition**
 
 ## Description
 
-Given a surface \(X\), a pseudo-effective divisor \(D\), and a finite set of irreducible curves \(C_1, \dots, C_n\), the **Zariski decomposition** expresses \(D\) uniquely as:
+Given a surface $X$, a pseudo-effective divisor \(D\), and a finite set of irreducible curves \(C_1, \dots, C_n\), the **Zariski decomposition** expresses \(D\) uniquely as:
 
 \[
 D = P + N
