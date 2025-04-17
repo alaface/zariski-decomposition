@@ -9,16 +9,16 @@ This repository provides a Magma implementation of the **Zariski decomposition**
 
 ## Description
 
-Given a surface $X$, a pseudo-effective divisor \(D\), and a finite set of irreducible curves \(C_1, \dots, C_n\), the **Zariski decomposition** expresses \(D\) uniquely as:
+Given a surface $X$, a pseudo-effective divisor $D$, and a finite set of irreducible curves $C_1, \dots, C_n$, the **Zariski decomposition** expresses $D$ uniquely as:
 
-\[
+$$
 D = P + N
-\]
+$$
 
 where:
-- \(P\): a **nef** divisor (i.e. \(P \cdot C_i \ge 0\) for all \(i\)),
-- \(N = \sum b_i C_i\): an **effective** divisor with support on a negative definite intersection matrix,
-- \(P \cdot N = 0\).
+- $P$ is a **nef** divisor (i.e. $P \cdot C_i \ge 0$ for all $i$),
+- $N = \sum b_i C_i$ is an **effective** divisor with support on a negative definite intersection matrix,
+- $P \cdot N = 0$.
 
 ## Mathematical Reference
 
@@ -31,16 +31,16 @@ See **Theorem 7.7** for the step-by-step construction.
 
 ## How it Works
 
-The algorithm iteratively removes the negative part of \(D\) as follows:
+The algorithm iteratively removes the negative part of $D$ as follows:
 
-1. **Negative curves**: Identify all curves \(C_i\) such that \(D \cdot C_i < 0\).
+1. **Negative curves**: Identify all curves $C_i$ such that $D \cdot C_i < 0$.
 2. **Linear system**: Solve the system  
-   \[
+   $$
    (C_i \cdot C_j)_{i,j} \cdot \mathbf{b} = (D \cdot C_i)_i
-   \]
-   where \(\mathbf{b}\) gives the coefficients of the negative part \(N = \sum b_i C_i\).
-3. **Update**: Replace \(D \leftarrow D - N\), and repeat.
-4. **Termination**: The process stops when the new divisor is nef. Since the Néron–Severi group has finite rank, this happens in finitely many steps.
+   $$
+where the $b_j$ are the coefficients of the negative part $N = \sum b_j C_j$.
+3. **Update**: Replace $D := D - N$, and repeat.
+4. **Termination**: The process stops when the updated divisor is nef. Since the Néron–Severi group has finite rank, this happens in finitely many steps.
 
 ## How to Use
 
