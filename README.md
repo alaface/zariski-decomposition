@@ -30,10 +30,6 @@ See **Theorem 7.7** for the step-by-step construction.
 
 ## How it Works
 
-The algorithm iteratively removes the negative part of $D$ as follows:
-
-## How it Works
-
 The algorithm computes the Zariski decomposition of a pseudo-effective divisor $D$ by iteratively extracting its negative part. It works as follows:
 
 1. **Negative curves**: Identify all irreducible curves $C_i$ in the support of $D$ such that $D \cdot C_i < 0$.
