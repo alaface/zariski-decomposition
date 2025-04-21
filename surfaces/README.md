@@ -1,4 +1,4 @@
-# Zariski Decomposition in Magma
+# Zariski Decomposition on surfaces
 
 This repository provides a Magma implementation of the **Zariski decomposition** of an effective divisor on an algebraic surface, based on the intersection matrix of the irreducible curve in the support of $D$.
 
