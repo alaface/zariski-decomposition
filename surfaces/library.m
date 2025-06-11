@@ -52,7 +52,7 @@ SolveNegativePart := function(D, NegC, M)
         end for;
         b[i,1] := IntersectionNumber(D, NegC[i], M);
     end for;
-    return Solution(A, Transpose(b));
+    return Eltseq(Solution(A, Transpose(b)));
 end function;
 
 ///////////////////////////////////////////////////////////////////////////
