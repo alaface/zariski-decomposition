@@ -12,7 +12,9 @@
 //   - The intersection number D·C computed as Transpose(D)*M*C
 ///////////////////////////////////////////////////////////////////////////
 IntersectionNumber := function(D, C, M)
-    return (D*M*C)[1];
+    n := Nrows(M);
+    U := Matrix(1,n,Eltseq(D))*M*Matrix(n,1,Eltseq(C));
+    return U[1,1];
 end function;
 
 ///////////////////////////////////////////////////////////////////////////
