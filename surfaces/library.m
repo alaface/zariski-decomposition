@@ -83,20 +83,21 @@ ZariskiDecomposition := function(D, Curves, M)
     P := D;
     Ntot := V!0;
 
+    Neg := [];
     repeat
-        Neg := NegativeCurves(P, Curves, M);
+        Neg := Sort(Setseq(Set(Neg cat NegativeCurves(P, Curves, M))));
         if #Neg eq 0 then
             return P, Ntot;
         end if;
 
-        coeff := SolveNegativePart(P, Neg, M);
+        coeff := SolveNegativePart(P, Neg, M); 
         Nstep := V!0;
         for i in [1..#Neg] do
             Nstep +:= coeff[i]*Neg[i];
         end for;
 
         P    -:= Nstep;
-        Ntot +:= Nstep;
+        Ntot +:= Nstep; 
     until IsNef(P, Curves, M);
 
     return P, Ntot;
